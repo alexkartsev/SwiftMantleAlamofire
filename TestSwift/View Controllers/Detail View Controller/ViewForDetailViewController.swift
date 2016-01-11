@@ -3,7 +3,7 @@
 //  TestSwift
 //
 //  Created by Alexander on 1/6/16.
-//  Copyright © 2016 iTechArt. All rights reserved.
+//  Copyright © 2016 Alex Kartsev. All rights reserved.
 //
 
 import Foundation
@@ -11,6 +11,9 @@ import UIKit
 import AlamofireImage
 
 class ViewForDetailViewController : UIView {
+    
+    let MAXWIDTH:CGFloat = 300.0
+    let MAXHEIGHT:CGFloat = 300.0
     
     var title:String!
     var email:String?
@@ -50,7 +53,7 @@ class ViewForDetailViewController : UIView {
 
         if (((imageURL) != nil) && ((imageView) == nil)) {
             imageView = UIImageView()
-            imageView!.frame = CGRectMake(bounds.size.width/2-150, titleLabel!.frame.origin.y + titleLabel!.frame.size.height+20, 300, 300)
+            imageView!.frame = CGRectMake(bounds.size.width/2-MAXWIDTH/2, titleLabel!.frame.origin.y + titleLabel!.frame.size.height+20, MAXWIDTH, MAXHEIGHT)
             let URL = NSURL(string: imageURL!)
             self.addSubview(imageView!)
             imageView?.af_setImageWithURL(URL!)
@@ -63,7 +66,7 @@ class ViewForDetailViewController : UIView {
         label.lineBreakMode = .ByWordWrapping
         label.text = title
         label.numberOfLines = 0
-        label.frame = CGRectMake(bounds.size.width/2-150, yPosition, 300, label.sizeThatFits(CGSizeMake(300, 100)).height)
+        label.frame = CGRectMake(bounds.size.width/2-MAXWIDTH/2, yPosition, MAXWIDTH, label.sizeThatFits(CGSizeMake(MAXWIDTH, 100)).height)
         self.addSubview(label)
     }
 }

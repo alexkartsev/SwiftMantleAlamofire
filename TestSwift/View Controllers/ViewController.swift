@@ -3,7 +3,7 @@
 //  TestSwift
 //
 //  Created by Alexander on 12/22/15.
-//  Copyright © 2015 iTechArt. All rights reserved.
+//  Copyright © 2015 Alex Kartsev. All rights reserved.
 //
 import UIKit
 import AlamofireImage

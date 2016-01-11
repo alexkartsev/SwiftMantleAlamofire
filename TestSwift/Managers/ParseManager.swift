@@ -3,7 +3,7 @@
 //  TestSwift
 //
 //  Created by Alexander on 1/5/16.
-//  Copyright © 2016 iTechArt. All rights reserved.
+//  Copyright © 2016 Alex Kartsev. All rights reserved.
 //
 
 import Foundation
